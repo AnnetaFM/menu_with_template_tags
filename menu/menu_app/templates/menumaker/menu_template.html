@@ -1,0 +1,14 @@
+<div id="menu">
+  <ul>
+    <li>
+      <a href="{{ menu_html.url|safe }}">{{ menu_html.title|safe }}</a>
+      <ul>
+        {% for item in menu_html.children %}
+          <li>
+            <a href="{{ item.url|safe }}">{{ item.title|safe }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</div>
